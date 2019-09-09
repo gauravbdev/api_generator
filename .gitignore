@@ -1,0 +1,12 @@
+scratchpad/*
+env/*
+__pycache__/*
+src/__pycache__/*
+template/__pycache__/*
+src/util/__pycache__/*
+src/app.py
+src/model/*
+src/env/*
+src/settings.conf
+settings.conf
+api_gen.conf

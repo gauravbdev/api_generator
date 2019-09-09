@@ -44,6 +44,8 @@ uvicorn app:app --reload
 ```
 
 ### notes
+- support for tables with composite keys as primary key will be added soon
+
 - currently table names or column names with spaces in your db are not supported by this tool, it will potentially break the code
 
 - all fields are set to be required by default, you can modify the class files inside the ```model``` folder to set default value of fields to None, this will make those fields optional

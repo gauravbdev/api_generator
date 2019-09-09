@@ -9,3 +9,5 @@ src/model/*
 src/env/*
 src/settings.conf
 api_gen.conf
+settings.conf
+sample_project/src/settings.conf

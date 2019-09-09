@@ -8,5 +8,4 @@ src/app.py
 src/model/*
 src/env/*
 src/settings.conf
-settings.conf
 api_gen.conf

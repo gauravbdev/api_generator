@@ -44,7 +44,9 @@ uvicorn app:app --reload
 ```
 
 ### notes
-- support for tables with composite keys as primary key will be added soon
+- support for custom select queriers(complex or simple) will be added
+
+- support for tables with composite keys as primary key will be added
 
 - currently table names or column names with spaces in your db are not supported by this tool, it will potentially break the code
 

@@ -43,7 +43,7 @@ from model.{singular} import *"""
 
 get_method = """
 
-@app.get('/get_{singular}/{{{pk}}}')
+@app.get('/{singular}/{{{pk}}}')
 async def get_{singular}({pk_dtype}):
     d = {{"{pk}": {pk}}}
     {singular}_meta = {class_name}Meta(**d)
@@ -52,7 +52,7 @@ async def get_{singular}({pk_dtype}):
 
 delete_method = """
 
-@app.delete('/delete_{singular}/{{{pk}}}')
+@app.delete('/{singular}/{{{pk}}}')
 async def delete_{singular}({pk_dtype}):
     d = {{"{pk}": {pk}}}
     {singular}_meta = {class_name}Meta(**d)
@@ -62,7 +62,7 @@ async def delete_{singular}({pk_dtype}):
 
 add_method = """
 
-@app.post('/add_{singular}')
+@app.post('/{singular}')
 async def add_{singular}({singular}: {class_name}):
     {set_pk_none}
     return _add({singular})
@@ -72,7 +72,7 @@ set_pk_none = """{singular}.{pk} = None"""
 
 
 update_method = """    
-@app.put('/update_{singular}')
+@app.put('/{singular}')
 async def update_{singular}({singular}: {class_name}):
     return _update({singular})
 """

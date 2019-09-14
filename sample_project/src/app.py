@@ -11,74 +11,74 @@ from model.product import *
 app = FastAPI(docs_url='/')
 
 
-@app.get('/get_customer/{customer_id}')
+@app.get('/customer/{customer_id}')
 async def get_customer(customer_id: int):
     d = {"customer_id": customer_id}
     customer_meta = CustomerMeta(**d)
     return _get(customer_meta)
 
 
-@app.delete('/delete_customer/{customer_id}')
+@app.delete('/customer/{customer_id}')
 async def delete_customer(customer_id: int):
     d = {"customer_id": customer_id}
     customer_meta = CustomerMeta(**d)
     return _delete(customer_meta)
 
 
-@app.post('/add_customer')
+@app.post('/customer')
 async def add_customer(customer: Customer):
     customer.customer_id = None
     return _add(customer)
     
-@app.put('/update_customer')
+@app.put('/customer')
 async def update_customer(customer: Customer):
     return _update(customer)
 
 
-@app.get('/get_order/{order_id}')
+@app.get('/order/{order_id}')
 async def get_order(order_id: int):
     d = {"order_id": order_id}
     order_meta = OrderMeta(**d)
     return _get(order_meta)
 
 
-@app.delete('/delete_order/{order_id}')
+@app.delete('/order/{order_id}')
 async def delete_order(order_id: int):
     d = {"order_id": order_id}
     order_meta = OrderMeta(**d)
     return _delete(order_meta)
 
 
-@app.post('/add_order')
+@app.post('/order')
 async def add_order(order: Order):
     order.order_id = None
     return _add(order)
     
-@app.put('/update_order')
+@app.put('/order')
 async def update_order(order: Order):
     return _update(order)
 
 
-@app.get('/get_product/{product_id}')
+@app.get('/product/{product_id}')
 async def get_product(product_id: int):
     d = {"product_id": product_id}
     product_meta = ProductMeta(**d)
     return _get(product_meta)
 
 
-@app.delete('/delete_product/{product_id}')
+@app.delete('/product/{product_id}')
 async def delete_product(product_id: int):
     d = {"product_id": product_id}
     product_meta = ProductMeta(**d)
     return _delete(product_meta)
 
 
-@app.post('/add_product')
+@app.post('/product')
 async def add_product(product: Product):
     product.product_id = None
     return _add(product)
     
-@app.put('/update_product')
+@app.put('/product')
 async def update_product(product: Product):
     return _update(product)
 

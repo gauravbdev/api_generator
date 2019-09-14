@@ -9,5 +9,8 @@ pip3 install -r requirements.txt
 uvicorn app:app --reload 
 ```
 
+### docs
 ![swagger doc](screenshots/docs.png)
+
+### example of a get method
 ![swagger get method](screenshots/getmethod.png)

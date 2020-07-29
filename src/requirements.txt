@@ -14,7 +14,7 @@ python-dateutil==2.8.0
 pytz==2019.2
 six==1.12.0
 starlette==0.12.8
-uvicorn==0.9.0
+uvicorn==0.11.7
 uvloop==0.13.0
 websockets==8.0.2
 
